@@ -1,24 +1,7 @@
-# README
+# SteepingTea2
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the same thing as the app SteepingTea, but it's made in Rails 5.
+Heroku's stack hosting the previous version was marked as end of life.
+So I took the opportunity to rebuild it using Rails 5 (the previous one was in Rails 4)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I am following a tutorial on Upcase/thoughtbot, by Matthew Mongeau.
