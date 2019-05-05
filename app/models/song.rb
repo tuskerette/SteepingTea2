@@ -11,8 +11,14 @@ class Song < ApplicationRecord
   scope :black,  -> { where("duration > ? and duration < ?", 181, 300) }
   scope :herbal, -> { where("duration > ?", 301) }
 
+
+  delegate :username, to: :user
+
+  private
+
   def set_duration
-    video = Yt::Video.new url: self.song_url
-    self.duration = video.duration
+    # video = Yt::Video.new id: self.song_url
+    # self.duration = video.duration
+    self.duration = 200
   end
 end

@@ -5,9 +5,4 @@
   = form.text_field :notes, placeholder: "Notes"
   = form.submit "Submit"
 
-= @songs.each do |song|
-  %p Username: #{song.user.username}
-  %p Song URL: #{song.song_url}
-  - unless song.notes.empty?
-    %p Notes: #{song.notes}
-  %hr
+= render @songs

@@ -3,12 +3,12 @@ Rails.application.routes.draw do
       root to: "dashboards#show"
   end
   root to: "homes#show"
-  resources :songs, only: [:create]
-  
+  resources :songs, only: [:create, :show]
+
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
   resource :session, only: [:create]
 
-  resources :users, only: [:create] do
+  resources :users, only: [:create, :show] do
     resource :password,
       controller: "clearance/passwords",
       only: [:create, :edit, :update]
