@@ -1,5 +1,6 @@
 class DashboardsController < ApplicationController
   def show
-    render
+    @song = Song.new
+    @songs = current_user.songs
   end
 end
