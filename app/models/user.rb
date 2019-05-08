@@ -12,6 +12,7 @@ class User < ApplicationRecord
   end
 
   def unlike(song)
+    redirect_to root_path
     liked_songs.destroy(song)
   end
 
