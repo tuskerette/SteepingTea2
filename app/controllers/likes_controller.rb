@@ -14,6 +14,7 @@ class LikesController < ApplicationController
   private
 
   def song
-    @_song ||= Song.find(params[:id]) # we use id cause it's a member route. if it was a nested resource we should have used [:song_id]
+    # we use id cause it's a member route. if it was a nested resource we should have used [:song_id]
+    @_song ||= Song.find(params[:id])
   end
 end
