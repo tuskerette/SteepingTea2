@@ -17,8 +17,8 @@ class Song < ApplicationRecord
   private
 
   def set_duration
-    # video = Yt::Video.new id: self.song_url
-    # self.duration = video.duration
-    self.duration = 200
+    truncated_video_id = self.song_url.split('=').last
+    video = Yt::Video.new id: truncated_video_id
+    self.duration = video.duration
   end
 end

@@ -1,8 +1,17 @@
-%h1 Dashboard
-
+%h3 Add a new song
 = form_for @song do |form|
   = form.url_field :song_url, placeholder: "Song URL", required: true
   = form.text_field :notes, placeholder: "Notes"
   = form.submit "Submit"
 
-= render @songs
+%h2 White tea
+= render @songs.white
+
+%h2 Green tea
+= render @songs.green
+
+%h2 Black tea
+= render @songs.black
+
+%h2 Herbal tea
+= render @songs.herbal

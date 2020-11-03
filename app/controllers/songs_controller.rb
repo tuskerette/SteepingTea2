@@ -7,7 +7,7 @@ class SongsController < ApplicationController
   private
 
   def song_params
-    params.require(:song).permit(:song_url, :notes)
+    params.require(:song).permit(:song_url, :notes, :duration)
   end
 
   def redirect_options_for(song)

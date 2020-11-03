@@ -1,3 +1,3 @@
 Yt.configure do |config|
-  config.api_key = Rails.application.credentials.yt_secret_token
+  config.api_key = ENV['YT_KEY']
 end
