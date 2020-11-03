@@ -4,14 +4,14 @@
   = form.text_field :notes, placeholder: "Notes"
   = form.submit "Submit"
 
-%h2!= 'White tea' if @songs.white.present?
+%h2.category= 'White tea' if @songs.white.present?
 = render @songs.white
 
-%h2!= 'Green tea' if @songs.green.present?
+%h2.category= 'Green tea' if @songs.green.present?
 = render @songs.green
 
-%h2!= 'Black tea' if @songs.black.present?
+%h2.category= 'Black tea' if @songs.black.present?
 = render @songs.black
 
-%h2!= 'Herbal tea' if @songs.herbal.present?
+%h2.category= 'Herbal tea' if @songs.herbal.present?
 = render @songs.herbal

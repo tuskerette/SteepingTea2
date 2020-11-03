@@ -1,6 +1,4 @@
 -# %p= link_to song.username, song.user
 = embed(song.song_url, 200, 150)
 - unless song.notes.empty?
-  %p Notes: #{song.notes}
-  
--# = like_button(song)
+  %p!= song.notes
