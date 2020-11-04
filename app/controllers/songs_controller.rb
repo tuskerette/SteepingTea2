@@ -7,14 +7,14 @@ class SongsController < ApplicationController
   private
 
   def song_params
-    params.require(:song).permit(:song_url, :notes, :duration)
+    params.require(:song).permit(:song_url, :notes, :duration, :title)
   end
 
   def redirect_options_for(song)
     if song.persisted?
-      { notice: "Song added successfully" }
+      flash[:notice] = 'Song added successfully'
     else
-      { alert: "Good Old Something Went Wrong" }
+      flash[:alert] = 'Good old something went wrong'
     end
   end
 end

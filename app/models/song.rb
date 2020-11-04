@@ -4,7 +4,7 @@ class Song < ApplicationRecord
   validates :song_url, presence: true, format: URI::regexp(%w(http https))
   validates :user, presence: true
 
-  before_create :set_duration
+  before_create :set_duration_title
 
   scope :white,  -> { where("duration > ? and duration < ?", 30, 90)}
   scope :green,  -> { where("duration > ? and duration < ?", 91, 180)}
@@ -16,9 +16,10 @@ class Song < ApplicationRecord
 
   private
 
-  def set_duration
+  def set_duration_title
     truncated_video_id = self.song_url.split('=').last
     video = Yt::Video.new id: truncated_video_id
     self.duration = video.duration
+    self.title = video.title
   end
 end

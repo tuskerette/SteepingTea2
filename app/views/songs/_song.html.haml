@@ -1,4 +1,5 @@
 -# %p= link_to song.username, song.user
 = embed(song.song_url, 200, 150)
+%p=! song.title
 - unless song.notes.empty?
   %p!= song.notes
