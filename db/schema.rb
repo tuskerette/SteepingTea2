@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2020_11_04_000430) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "duration", null: false
-    t.string "title", default: "missing title", null: false
+    t.string "title"
     t.index ["user_id"], name: "index_songs_on_user_id"
   end
 
