@@ -1,4 +1,6 @@
 %h3 Add a song
+%p Song URL example https://www.youtube.com/watch?v=uffJ33bcYec (this is fake)
+
 = form_for @song do |form|
   = form.url_field :song_url, placeholder: "Song URL", required: true
   = form.text_field :notes, placeholder: "Notes"
