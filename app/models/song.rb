@@ -20,6 +20,6 @@ class Song < ApplicationRecord
     truncated_video_id = self.song_url.split('=').last
     video = Yt::Video.new id: truncated_video_id
     self.duration = video.duration
-    self.title = video.title
+    # self.title = video.title
   end
 end
